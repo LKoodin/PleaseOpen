@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Toggle</title>
     <style>
-        #image2 {
-            display: none;
-        }
+    img {
+        max-width: 100%;    /* Makes the image width not exceed the container width */
+        height: auto;       /* Maintains the aspect ratio */
+        display: block;     /* Removes extra space below the image */
+        margin: 0 auto;     /* Centers the image horizontally */
+    }
+    #image2 {
+        display: none;      /* Keeps the second image hidden initially */
+    }
     </style>
 </head>
 <body>
