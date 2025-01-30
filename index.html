@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Toggle</title>
+    <style>
+        #image2 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <img id="1" src="1.png" alt="First Image" style="cursor:pointer;" onclick="toggleImage()">
+    <img id="2" src="2.png" alt="Second Image" style="cursor:pointer; display:none;" onclick="toggleImage()">
+
+    <script>
+        function toggleImage() {
+            var img1 = document.getElementById('1');
+            var img2 = document.getElementById('2');
+            if (img1.style.display === 'none') {
+                img1.style.display = 'block';
+                img2.style.display = 'none';
+            } else {
+                img1.style.display = 'none';
+                img2.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
