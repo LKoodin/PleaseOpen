@@ -5,14 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Toggle</title>
     <style>
-    img {
-        max-width: 100%;    /* Makes the image width not exceed the container width */
-        height: auto;       /* Maintains the aspect ratio */
-        display: block;     /* Removes extra space below the image */
-        margin: 0 auto;     /* Centers the image horizontally */
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%; /* Ensures that the body takes full viewport height */
+        display: flex;
+        justify-content: center; /* Centers content horizontally */
+        align-items: center; /* Centers content vertically */
     }
+
+    img {
+        max-width: 100%; /* Limits the image width to 100% of its container */
+        max-height: 100vh; /* Limits the image height to 100% of the viewport height */
+        width: auto; /* Maintains width aspect ratio */
+        height: auto; /* Maintains height aspect ratio */
+        display: block; /* Ensures images are block level for proper displaying */
+    }
+
     #image2 {
-        display: none;      /* Keeps the second image hidden initially */
+        display: none; /* Keeps the second image hidden initially */
     }
     </style>
 </head>
